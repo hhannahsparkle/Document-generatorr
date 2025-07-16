@@ -11,12 +11,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Plus, Trash2, FileText } from "lucide-react" // Added Table import
 
 interface SimpleFormProps {
-  template: any // Keep as any for now, will refine if needed
-  onSubmit: (data: any) => void // Keep as any for now
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  template: any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onSubmit: (data: any) => void
   onCancel: () => void
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function SimpleForm({ template, onSubmit, onCancel }: SimpleFormProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [formData, setFormData] = useState<any>({
     // Basic fields
     date: new Date().toISOString().split("T")[0],
